@@ -1,25 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&display=swap');
 
-
 h1 {
     font-family: "Lemonada", cursive;
     line-height: 200%;
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
 }
 
 h2 {
     font-family: "Lemonada", cursive;
     line-height: 100%;
-    font-size: 50px;
+    font-size: 3rem;
     color: #00A100;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
-    /* width: 100%;
-    height: 100%; */
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -58,7 +55,7 @@ h2 {
 .form_box {
     background: white;
     border-radius: 50px;
-    padding: 6.25% 5%;
+    padding: 4% 4%;
     display: flex;
     flex-direction: column;
     gap: 3.125rem;
@@ -92,7 +89,7 @@ h2 {
 
 
 .absolute{
-  position: absolute;
+    position: absolute;
 }
 .ribbon1 {
     z-index: 100;
@@ -107,56 +104,57 @@ h2 {
     overflow: hidden;
     width: 33.59131rem;
 }
+
 .img1{
-  z-index: 100;
-  right: 1.9vw;
-  bottom: 20.3vh;
-  overflow: hidden;
-  width: 11.5vw;
-  border-radius: 31.25rem;
-  box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    right: 1.9vw;
+    bottom: 20.3vh;
+    overflow: hidden;
+    width: 9vw;
+    border-radius: 31.25rem;
+    box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .img2{
     z-index: 99;
-    right: -5.1vw;
-    bottom: -12vh;
+    right: -4.1vw;
+    bottom: -10vh;
     overflow: hidden;
-    width: 12vw;
+    width: 11vw;
     border-radius: 12.5rem;
     box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .img3{
     z-index: 100;
-    left: -4.1vw;
-    top: 19vh;
+    left: -3.2vw;
+    bottom: 38vh;
     overflow: hidden;
-    width: 7.5vw;
+    width: 6.5vw;
     border-radius: 31.25rem;
     box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.form_box button {
-  font-family: "Lemonada", cursive;
-  color: #FFF;
-  font-size: 1.77119rem;
-  font-weight: 700;
-  line-height: 100%;
-  border-radius: 17.71175rem;
-  border: 6px solid #FFF;
-  background: #00A100;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.30);
-  
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  height: 10rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+    .form_box button {
+    font-family: "Lemonada", cursive;
+    color: #FFF;
+    font-size: 1.77119rem;
+    font-weight: 700;
+    line-height: 100%;
+    border-radius: 17.71175rem;
+    border: 6px solid #FFF;
+    background: #00A100;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.30);
+    
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
-  position: absolute;
-  right: 8vw;
-  bottom: -4vh;
-  z-index: 999;
+    position: absolute;
+    z-index: 999;
+    right: 10vw;
+    bottom: -8vh;
 }
 
 
@@ -164,27 +162,18 @@ h2 {
 canvas{ 
     display: block;
     vertical-align: bottom;
-  }
+}
   /* ---- particles.js container ---- */ 
-  #particles-js{ 
+#particles-js{ 
     position:absolute; 
     top:0;
     left:0;
     width: 100%; 
     height: 100%; 
     z-index:0;
-  }
-  .text{
-    color:#fff;
-    font-size:7vw;
-    position:inline-block;
-    z-index:1;
-    text-align:center;
-    cursor:default;
-    pointer-events:none;
-  }
-  
-  a:hover, a:visited, a:link, a:active{
+}
+
+a:hover, a:visited, a:link, a:active{
     text-decoration: none;
     color: rgba(255,255,255,0.8);
-  }
+}

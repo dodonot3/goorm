@@ -81,3 +81,14 @@ particlesJS("particles-js", {
   // };
   // requestAnimationFrame(update);
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".form_box");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const userName = document.querySelector("#user_name").value;
+
+        alert(`${userName}님, Happy Christmas~❤️`);
+    });
+});
