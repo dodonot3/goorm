@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/christmas.css">
+</head>
+
+<body>
+    <div class="container">
+        <img class="absolute ribbon1" src="../source/ribbon1.svg" alt="">
+        <img class="absolute ribbon2" src="../source/ribbon2.svg" alt="">
+        
+        
+        <div class="contents">
+            <div class="title">
+                <h1>Looking for people to join a Christmas party!</h1>
+                <h1>If you're interested, please leave your email in the form below!</h1>
+            </div>
+            
+            <form class="form_box" action="your-server-endpoint" method="POST">
+                <img class="absolute img1" src="../source/christmas-img1.svg" alt="">
+                <img class="absolute img2" src="../source/christmas-img2.svg" alt="">
+                <img class="absolute img3" src="../source/christmas-img3.svg" alt="">
+                <h2>HELLO,</h2>
+                <div class="input_wrap">
+                    <h2>MY NAME IS</h2>
+                    <input type="text" placeholder="Enter your name here" name="user_name" id="user_name" required>
+                </div>
+                <div class="input_wrap">
+                    <h2>HERE IS MY EMAIL</h2>
+                    <input type="email" placeholder="Enter your email here" name="user_email" id="user_email" required>
+                </div>
+                <div class="input_wrap">
+                    <button type="submit">
+                        <span>SEND</span>
+                        <img src="../source/chevron.svg" alt="submit">
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div id="particles-js"></div> 
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="../js/christmas.js"></script>
+</body>
+
+</html>
