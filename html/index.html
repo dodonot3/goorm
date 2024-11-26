@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1240px, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1240px, initial-scale=1.0">
+	<title>이것 저것 테스트 합니다.</title>
 </head>
 <body>
-    안녕하세요!!!
+	<p>연습 html 입니다.</p>
+	<p>나중에 index라는 파일명을 어떻게 해볼게요..ㅎ</p>
+	<button type="button" id="ctaBt">클릭</button>
+	
+	<script>
+		let ctaBt = document.querySelector("#ctaBt") //이벤트 쓰기
+		ctaBt.addEventListener("click", () => {
+			alert("클릭했어요!");
+			console.log("클릭했어요!");
+		})
+	</script>
 </body>
 </html>
