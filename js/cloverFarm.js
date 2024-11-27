@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateFontSizeForLove() {
         const mediaQuery = window.matchMedia("(min-width: 550px)");
         if (mediaQuery.matches) {
-            bubble.style.fontSize = "4vw"; // 550px 이상일 때 폰트 크기
+            bubble.style.fontSize = "30px"; // 550px 이상일 때 폰트 크기
         } else {
             bubble.style.fontSize = "5vw"; // 550px 미만일 때 기본 폰트 크기
         }
