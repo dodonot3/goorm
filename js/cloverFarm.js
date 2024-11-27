@@ -74,14 +74,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function updateRemainingButtons() {
-    // 남아있는 버튼 갯수 계산
-    const remainingButtons = cloverList.querySelectorAll("button:not(.hidden)").length;
+    const remainingButtons = cloverList.querySelectorAll("button:not(.hidden)").length; // 남아있는 버튼 갯수 계산
     remainCount.textContent = remainingButtons;
-
     // :not(...) 부정 선택자, 괄호 안에 명시된 조건에 맞지 않는 요소를 선택
     // 속성 선택자 [attribute="value"] ex) [style*='display: none']
     // *=는 부분 일치를 의미, 특정 문자열이 속성 값에 포함되어 있으면 선택
+
+
+    // 모달창 표시 조건 확인
+    if (remainingButtons === 0) {
+        showModal();
+    }
 }
+
+// 모달창 표시
+function showModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.add("show"); 
+
+    // 닫기 버튼 클릭 이벤트
+    const closeModalButton = document.getElementById("closeModal");
+    closeModalButton.addEventListener("click", () => {
+        modal.classList.remove("show"); 
+        location.reload();
+    });
+}
+
+
+
 
 // 말풍선 변경
 document.addEventListener("DOMContentLoaded", () => {
@@ -101,12 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 기본 글자색 저장
     const defaultColor = bubble.style.color;
+    const defaultSize = bubble.style.fontSize;
 
     // 3초마다 기본 메시지 변경
     function startBubbleRotation() {
         messageInterval = setInterval(() => {
             bubble.innerHTML = messages[index];
             bubble.style.color = defaultColor; // 기본 글자색으로 복구
+            bubble.style.fontSize = defaultSize; // 기본 글자색으로 복구
             index = (index + 1) % messages.length; // 순환하도록 인덱스 업데이트
         }, 3000);
     }
@@ -121,8 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // 기본 메시지 변경 멈추기
             clearInterval(messageInterval);
 
-            bubble.textContent = "사랑해~"; 
-            bubble.style.color = "#E23737"; 
+            bubble.textContent = "사랑해~❤️"; 
+            bubble.style.color = "#E23737";
+            bubble.style.fontSize = "5vw";  
 
             // 2초 후 기본 메시지로 복귀
             setTimeout(() => {

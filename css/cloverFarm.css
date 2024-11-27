@@ -158,3 +158,51 @@ h2 {
 #cloverCountDetails.no-after::after {
     display: none; /* 자식 요소가 없을 때 이미지를 숨김 */
 }
+
+
+/* 모달 스타일 */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* 기본적으로 숨김 */
+    opacity: 0; /* 투명 */
+    transition: opacity 0.3s ease;
+}
+
+#modal.show {
+    visibility: visible;
+    opacity: 1; /* 보이도록 변경 */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: #E23737;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #C02020;
+}
