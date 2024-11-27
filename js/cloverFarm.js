@@ -10,52 +10,68 @@
 - 남은 카운트 변숫
 */
 
-// '클로버 카운트 상세' 객체안에 입력되어 DB에 보관되도록
-const cloverCountDetails = {};
+const cloverCountDetails = {}; // '클로버 카운트 상세' 객체안에 입력되어 보관되도록
 
-//각 메뉴와 가격에 대한 할당 변수
 const cloverList = document.querySelector("#clover");
 const cloverItems = document.querySelector("#cloverCountDetails");
 const totalClover = document.querySelector("#total");
-const remainCount = document.querySelector("#remain"); // 남은 갯수 표시 요소
+const remainCount = document.querySelector("#remain");
 
-// 초기 남은 버튼 갯수 설정
-updateRemainingButtons();
+updateRemainingButtons();// 초기 남은 버튼 갯수 설정
 
-cloverList.addEventListener("click", (e)=>{
-	//메뉴명이랑 가격받아오기
-	if(e.target.tagName === "BUTTON"){
-        const button = e.target; // 클릭한 버튼 요소 참조
-		const name = e.target.getAttribute("data-name");
-		// 클로버 내역이 있으면 count 1 증가
-		// 클로버 내역이 없으면 클로버 종류를 추가하고 count를 1로 설정
-		if(cloverCountDetails[name]){
-			cloverCountDetails[name].count++;
-		}else{
-			cloverCountDetails[name] = {count:1};
-		}
+document.addEventListener("DOMContentLoaded", () => {
+    const cloverItems = document.querySelector("#cloverCountDetails");
 
-        // 클릭한 버튼 숨기기 (hidden 클래스 추가)
-        button.classList.add("hidden");
+    // 버튼 클릭 이벤트에서 div 추가 여부에 따라 ::after 상태 변경
+    function updateCloverDetailsState() {
+        if (cloverItems.children.length > 0) {
+            cloverItems.classList.remove("no-after");
+        } else {
+            cloverItems.classList.add("no-after");
+        }
+    }
 
-		updateCart();
-        updateRemainingButtons();
-		console.log(cloverCountDetails); //객체가 제대로 만들어지는지 확인
-	}
-
-	function updateCart(){
-		cloverItems.innerHTML = ""; //초기화해서 객체를 다시 넣으면서 조건문을 확인하는게 최선일까? - DB와 모듈로 JS를 설계한다면 가능하다는 이야기를 들었다
-		let total = 0; 
-		for(const name in cloverCountDetails){
-			const {count} = cloverCountDetails[name]; //구조 분해 할당
-			total += count;
-			const item = document.createElement("div");
-			item.textContent = `${name} x ${count}`;
-			cloverItems.appendChild(item); // item을 cloverItems 자식 요소로 추가
-		}
-		totalClover.textContent = total;
-	}
+    // 말풍선 초기 상태 호출
+    updateCloverDetailsState();
+    
+    cloverList.addEventListener("click", (e)=>{
+        //메뉴명이랑 가격받아오기
+        if(e.target.tagName === "BUTTON"){
+            const button = e.target; // 클릭한 버튼 요소 참조
+            const name = e.target.getAttribute("data-name");
+            // 클로버 내역이 있으면 count 1 증가
+            // 클로버 내역이 없으면 클로버 종류를 추가하고 count를 1로 설정
+            if(cloverCountDetails[name]){
+                cloverCountDetails[name].count++;
+            }else{
+                cloverCountDetails[name] = {count:1};
+            }
+    
+            button.classList.add("hidden");
+    
+            updateCart();
+            updateRemainingButtons();
+            updateCloverDetailsState(); // 말풍선 상태 업데이트 호출
+            console.log(cloverCountDetails); //객체가 제대로 만들어지는지 확인
+        }
+    
+        function updateCart(){
+            cloverItems.innerHTML = ""; //초기화해서 객체를 다시 넣으면서 조건문을 확인하는게 최선일까? - DB와 모듈로 JS를 설계한다면 가능하다는 이야기를 들었다
+            let total = 0; 
+            for(const name in cloverCountDetails){
+                const {count} = cloverCountDetails[name]; //구조 분해 할당
+                total += count;
+                const item = document.createElement("div");
+                item.textContent = `${name} x ${count}`;
+                cloverItems.appendChild(item); // item을 cloverItems 자식 요소로 추가
+            }
+            totalClover.textContent = total;
+        }
+    })
+    
 })
+
+
 
 function updateRemainingButtons() {
     // 남아있는 버튼 갯수 계산
@@ -115,3 +131,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
