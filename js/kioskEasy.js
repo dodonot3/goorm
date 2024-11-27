@@ -35,7 +35,7 @@ menuList.addEventListener("click", (e)=>{
 		// 콘솔을 menuList 이벤트 함수 밖에서 찍으면 실시간으로 반영이 안됨.. 왜지..?
 	}
 	function updateCart(){
-		cartItems.innerHTML = ""; //초기화해서 객체를 다시 넣으면서 조건문을 확인하는게 최선일까?
+		cartItems.innerHTML = ""; //초기화해서 객체를 다시 넣으면서 조건문을 확인하는게 최선일까? - DB와 모듈로 JS를 설계한다면 가능하다는 이야기를 들었다
 		let total = 0; 
 		//let 안 붙이고 했다가 스코프를 오염시킴
 		//변수를 명시적으로 선언하지 않고 값을 할당하면, 해당 변수는 자동으로 전역 변수로 처리

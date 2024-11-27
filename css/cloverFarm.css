@@ -1,0 +1,154 @@
+.hidden {
+    display: none;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/BMJUA/BMJUA.css');
+
+* {
+    font-family: 'BM JUA';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0 auto;
+    /* 화면 중앙 정렬 */
+    min-width: 320px;
+    max-width: 550px;
+    width: 100%;
+    /* 화면 크기를 기준으로 조정 */
+    height: 100vh;
+    /* 전체 화면 높이 */
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container img {
+    position: relative;
+    z-index: -999;
+}
+
+h1 {
+    color: #583f3f;
+    position: absolute;
+    top: 14.6vw;
+    font-size: 6.8vw;
+}
+
+.character {
+    position: absolute;
+    top: 30vw;
+    width: 36vw;
+}
+
+h2 {
+    color: #583f3f;
+    position: absolute;
+    background: url(../source/cloverFarm/bubble1.png) no-repeat;
+    background-size: cover;
+    font-size: 3.7vw;
+    line-height: 7vw;
+    width: 28vw;
+    display: flex;
+    justify-content: center;
+    top: 40vw;
+    right: 3vw;
+}
+
+#cloverCountDetails {
+    position: absolute;
+    top: 51vw;
+    right: 5.7vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: #583f3f;
+}
+
+#cloverCountDetails::after {
+    content: '';
+    position: absolute;
+    background: url(../source/cloverFarm/bubble3.png) no-repeat;
+    width: 28vw;
+    height: 32vw;
+    top: -2.6vw;
+    left: -2.5vw;
+    z-index: -1;
+    background-size: contain;
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 29vw;
+    left: 6vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: #583f3f;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    background: url(../source/cloverFarm/bubble2.png) no-repeat;
+    width: 28vw;
+    height: 32vw;
+    top: -2.6vw;
+    left: -2.5vw;
+    z-index: -1;
+    background-size: contain;
+}
+
+#cloverCountDetails> {
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 551px) {
+    body {
+        width: 550px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        top: 80px;
+        font-size: 38px;
+    }
+
+    .character {
+        top: 165px;
+        width: 200px;
+    }
+
+    h2 {
+        top: 220px;
+        right: 20px;
+        font-size: 17px;
+        line-height: 36px;
+        width: 148px;
+    }
+
+    #cloverCountDetails {
+        top: 274px;
+        right: 30px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    #cloverCountDetails::after {
+        width: 150px;
+        height: 170px;
+        top: -11px;
+        left: -20px;
+        background-size: contain;
+    }
+}
