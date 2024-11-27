@@ -1,11 +1,7 @@
-.hidden {
-    display: none;
-}
-
-@import url('https://cdn.jsdelivr.net/gh/fonts-archive/BMJUA/BMJUA.css');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Lemonada:wght@300..700&display=swap');
 
 * {
-    font-family: 'BM JUA';
+    font-family: "Jua", sans-serif;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -20,6 +16,10 @@ body {
     /* 화면 크기를 기준으로 조정 */
     height: 100vh;
     /* 전체 화면 높이 */
+}
+
+.hidden {
+    display: none;
 }
 
 .container {
