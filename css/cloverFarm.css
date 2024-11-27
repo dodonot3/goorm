@@ -113,6 +113,181 @@ h2 {
     z-index: 1;
 }
 
+button {
+    position: absolute;
+    background: none;
+    border: none;
+    /* border: 1px solid red; */
+}
+
+button img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* 이미지가 클릭 이벤트를 차단하지 않도록 설정!!! 반드시!! */
+}
+
+.cloverbtn {
+    transition: transform 0.2s ease-in-out;
+}
+
+.cloverbtn:hover {
+    transform: scale(1.5)
+}
+
+.babyclover {
+    z-index: 2;
+}
+
+.babyclover img {
+    width: 8vw;
+}
+
+.babyclover1 {
+    left: 19vw;
+    bottom: 19vw;
+}
+
+.babyclover2 {
+    left: 12vw;
+    top: 113vw;
+}
+
+.babyclover3 {
+    left: 24vw;
+    top: 130vw;
+}
+
+.babyclover4 {
+    left: 24vw;
+    top: 140vw;
+}
+
+.babyclover5 {
+    right: 12vw;
+    top: 113vw;
+}
+
+.bigclover {
+    z-index: 2;
+}
+
+.bigclover img {
+    width: 12vw;
+}
+
+.bigclover1 {
+    top: 130vw;
+    right: 24vw;
+}
+
+.bigclover2 {
+    top: 140vw;
+    right: 30vw;
+}
+
+.bigclover3 {
+    top: 140vw;
+    right: 30vw;
+}
+
+.bigclover4 {
+    top: 120vw;
+    left: 20vw;
+}
+
+.bigclover5 {
+    top: 100vw;
+    left: 30vw;
+}
+
+.bigclover6 {
+    bottom: 40vw;
+    left: 30vw;
+}
+
+.bigclover6 {
+    bottom: 60vw;
+    left: 28vw;
+}
+
+.bigclover7 {
+    bottom: 49vw;
+    right: 30vw;
+}
+
+.bigclover8 {
+    bottom: 63vw;
+    left: 9vw;
+}
+
+.bigclover9 {
+    top: 120vw;
+    left: 70vw;
+}
+
+.bigclover10 {
+    bottom: 28vw;
+    right: 17vw;
+}
+
+.bigclover11 {
+    top: 128vw;
+    left: 17vw;
+}
+
+.heart {
+    z-index: 1;
+}
+
+.heart.small {
+    width: 6vw;
+}
+
+.heart.big {
+    width: 8vw;
+}
+
+.heart1 {
+    top: 134vw;
+    left: 28vw;
+}
+
+.heart2 {
+    top: 126vw;
+    left: 20vw;
+}
+
+.heart3 {
+    top: 142vw;
+    left: 60vw;
+}
+
+.heart4 {
+    top: 124vw;
+    left: 70vw;
+}
+
+.info {
+    color: #ffd200;
+    font-size: 6vw;
+    -webkit-text-stroke: 1px #4d301d;
+    text-shadow: 1px 0px #4d301d, 0px 2px #4d301d, -1px 0px #4d301d, 0px -1px #4d301d;
+    position: absolute;
+}
+#total, #remain{
+    font-size: 10vw;
+}
+.totallnfo{
+    top: 63vw;
+    right: 5vw;
+}
+.remainInfo{
+    top: 84vw;
+}
+
+
+
 @media (min-width: 551px) {
     body {
         width: 550px;
@@ -137,6 +312,24 @@ h2 {
         width: 148px;
     }
 
+    .info {
+        font-size: 33px;
+    }
+    
+    #total, #remain {
+        font-size: 49px;
+    }
+    
+    .totallnfo {
+        top: 340px;
+        right: 26px; 
+    }
+    
+    .remainInfo {
+        top: 464px;
+    }    
+    
+
     #cloverCountDetails {
         top: 274px;
         right: 30px;
@@ -150,6 +343,141 @@ h2 {
         top: -11px;
         left: -20px;
         background-size: contain;
+    }
+
+    .speech-bubble {
+        top: 164px;
+        left: 21px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .speech-bubble::after {
+        width: 160px;
+        top: -20px;
+        left: -12px;
+    }
+
+    button img {
+        width: 100%;
+        height: auto;
+    }
+    
+
+    .babyclover img {
+        width: 40px;
+    }
+
+    .bigclover img {
+        width: 60px;
+    }
+
+    .babyclover1 {
+        left: 70px;
+        bottom: 124px;
+    }
+
+    .babyclover2 {
+        left: 40px;
+        top: 770px;
+    }
+
+    .babyclover3 {
+        left: 80px;
+        top: 640px;
+    }
+
+    .babyclover4 {
+        left: 160px;
+        top: 740px;
+    }
+
+    .babyclover5 {
+        right: 40px;
+        top: 559px;
+    }
+
+    .bigclover1 {
+        top: 610px;
+        right: 80px;
+    }
+
+    .bigclover2 {
+        top: 580px;
+        right: 100px;
+    }
+
+    .bigclover3 {
+        top: 650px;
+        right: 100px;
+    }
+
+    .bigclover4 {
+        top: 710px;
+        left: 120px;
+    }
+
+    .bigclover5 {
+        top: 840px;
+        left: 100px;
+    }
+
+    .bigclover6 {
+        bottom: 100px;
+        left: 100px;
+    }
+
+    .bigclover7 {
+        bottom: 120px;
+        right: 100px;
+    }
+
+    .bigclover8 {
+        bottom: 150px;
+        left: 30px;
+    }
+
+    .bigclover9 {
+        top: 600px;
+        left: 300px;
+    }
+
+    .bigclover10 {
+        bottom: 220px;
+        right: 40px;
+    }
+
+    .bigclover11 {
+        top: 620px;
+        left: 60px;
+    }
+
+    .heart.small {
+        width: 30px;
+    }
+
+    .heart.big {
+        width: 40px;
+    }
+
+    .heart1 {
+        top: 738px;
+        left: 154px;
+    }
+
+    .heart2 {
+        top: 850px;
+        left: 108px;
+    }
+
+    .heart3 {
+        top: 612px;
+        left: 314px;
+    }
+
+    .heart4 {
+        top: 622px;
+        left: 420px;
     }
 }
 

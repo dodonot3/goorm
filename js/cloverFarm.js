@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageInterval = setInterval(() => {
             bubble.innerHTML = messages[index];
             bubble.style.color = defaultColor; // 기본 글자색으로 복구
-            bubble.style.fontSize = defaultSize; // 기본 글자색으로 복구
+            bubble.style.fontSize = defaultSize; // 기본 글자크기로 복구
             index = (index + 1) % messages.length; // 순환하도록 인덱스 업데이트
         }, 3000);
     }
