@@ -123,14 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const defaultColor = bubble.style.color;
     const defaultSize = bubble.style.fontSize;
 
-    // 3초마다 기본 메시지 변경
+    // 2초마다 기본 메시지 변경
     function startBubbleRotation() {
         messageInterval = setInterval(() => {
             bubble.innerHTML = messages[index];
             bubble.style.color = defaultColor; // 기본 글자색으로 복구
             bubble.style.fontSize = defaultSize; // 기본 글자크기로 복구
             index = (index + 1) % messages.length; // 순환하도록 인덱스 업데이트
-        }, 3000);
+        }, 2000);
     }
 
     // 말풍선 메시지 초기화
@@ -145,13 +145,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
             bubble.textContent = "사랑해~❤️"; 
             bubble.style.color = "#E23737";
-            bubble.style.fontSize = "5vw";  
 
-            // 2초 후 기본 메시지로 복귀
+            // 550px 이상인지 확인 후 폰트 크기 변경
+            updateFontSizeForLove();
+
+            // 1초 후 기본 메시지로 복귀
             setTimeout(() => {
                 startBubbleRotation(); // 기본 메시지 로테이션 재시작
-            }, 1000);
+            }, 100);
         }
     });
+
+    // 사랑해 메시지 폰트 크기 업데이트
+    function updateFontSizeForLove() {
+        const mediaQuery = window.matchMedia("(min-width: 550px)");
+        if (mediaQuery.matches) {
+            bubble.style.fontSize = "4vw"; // 550px 이상일 때 폰트 크기
+        } else {
+            bubble.style.fontSize = "5vw"; // 550px 미만일 때 기본 폰트 크기
+        }
+    }
+    
 });
 
