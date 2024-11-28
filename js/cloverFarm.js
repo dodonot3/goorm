@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
             button.classList.add("hidden");
     
-            updateCart();
+            updateDetails();
             updateRemainingButtons();
             updateCloverDetailsState(); // 말풍선 상태 업데이트 호출
             console.log(cloverCountDetails); //객체가 제대로 만들어지는지 확인
         }
     
-        function updateCart(){
+        function updateDetails(){
             cloverItems.innerHTML = ""; //초기화해서 객체를 다시 넣으면서 조건문을 확인하는게 최선일까? - DB와 모듈로 JS를 설계한다면 가능하다는 이야기를 들었다
             let total = 0; 
             for(const name in cloverCountDetails){
